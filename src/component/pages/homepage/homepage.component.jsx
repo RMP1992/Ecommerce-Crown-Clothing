@@ -6,5 +6,6 @@ const HomePage = () =>(
     <div className='homepage' >
         <Directory />
     </div>
+    <h1></h1>
 );
 export default HomePage
