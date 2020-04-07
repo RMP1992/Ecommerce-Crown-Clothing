@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Ecommerce-Crown-Clothing/static/css/main.b68ea26a.chunk.css",
+    "main.js": "/Ecommerce-Crown-Clothing/static/js/main.5f310031.chunk.js",
+    "main.js.map": "/Ecommerce-Crown-Clothing/static/js/main.5f310031.chunk.js.map",
+    "runtime-main.js": "/Ecommerce-Crown-Clothing/static/js/runtime-main.6a5f88ea.js",
+    "runtime-main.js.map": "/Ecommerce-Crown-Clothing/static/js/runtime-main.6a5f88ea.js.map",
+    "static/js/2.7e275c00.chunk.js": "/Ecommerce-Crown-Clothing/static/js/2.7e275c00.chunk.js",
+    "static/js/2.7e275c00.chunk.js.map": "/Ecommerce-Crown-Clothing/static/js/2.7e275c00.chunk.js.map",
+    "index.html": "/Ecommerce-Crown-Clothing/index.html",
+    "precache-manifest.ea1eeae919705edf0f3ba12c6352db22.js": "/Ecommerce-Crown-Clothing/precache-manifest.ea1eeae919705edf0f3ba12c6352db22.js",
+    "service-worker.js": "/Ecommerce-Crown-Clothing/service-worker.js",
+    "static/css/main.b68ea26a.chunk.css.map": "/Ecommerce-Crown-Clothing/static/css/main.b68ea26a.chunk.css.map",
+    "static/js/2.7e275c00.chunk.js.LICENSE.txt": "/Ecommerce-Crown-Clothing/static/js/2.7e275c00.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6a5f88ea.js",
+    "static/js/2.7e275c00.chunk.js",
+    "static/css/main.b68ea26a.chunk.css",
+    "static/js/main.5f310031.chunk.js"
+  ]
+}
