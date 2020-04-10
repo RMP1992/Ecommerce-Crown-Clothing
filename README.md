@@ -1,3 +1,8 @@
+## Issues
+
+TypeError: Cannot read property 'map' of undefined - State collections had a typo, so when I called map the names of the states did not match. 
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
