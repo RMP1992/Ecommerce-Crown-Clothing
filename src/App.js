@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import HomePage from './component/pages/homepage/homepage.component';
 import ShopPage from './component/pages/shop/shop.component';
 import Header from './component/header/header.component';
+import SignInAndSignUpPage from './component/pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
 import './App.css';
 
 
@@ -17,6 +18,7 @@ function App() {
         {/* exact makes it so that the path in this case'/' has to match in order for the component to be rendered */}
         <Route exact path='/' component={HomePage} />
         <Route exact path='/shop' component={ShopPage} />
+        <Route exact path='/signin' component={SignInAndSignUpPage} />
       </Switch>
       
     </div>
