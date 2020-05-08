@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect} from 'react-router-dom';
 import { connect } from 'react-redux';
 import HomePage from './component/pages/homepage/homepage.component';
 import ShopPage from './component/pages/shop/shop.component';
@@ -50,16 +50,19 @@ class App extends React.Component {
         {/* Switch render only one page the moment one path matches, it avoids accidently rendering multiple components */}
         {/* exact makes it so that the path in this case'/' has to match in order for the component to be rendered */}
         <Route exact path='/' component={HomePage} />
-        <Route exact path='/shop' component={ShopPage} />
-        <Route exact path='/signin' component={SignInAndSignUpPage} />
+        <Route path='/shop' component={ShopPage} />
+        <Route exact path='/signin' render={() => this.props.currentUser ? (<Redirect to='/'/>) : (<SignInAndSignUpPage/>) } />
       </Switch>
       
     </div>
   );
   }
 }
+const mapStateToProps = ({user}) => ({
+  currentUser: user.currentUser
+})
 const mapDispatchToProps = dispatch => ({
   setCurrentUser: user => dispatch(setCurrentUser(user)) //dispatch lets redux know that whatever ypu're passing me is an action object that needs to be passed to every reducer
 
 })
-export default connect(null, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);
