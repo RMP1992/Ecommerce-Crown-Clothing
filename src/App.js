@@ -1,12 +1,16 @@
 import React from 'react';
 import { Switch, Route, Redirect} from 'react-router-dom';
 import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
+
 import HomePage from './component/pages/homepage/homepage.component';
 import ShopPage from './component/pages/shop/shop.component';
 import Header from './component/header/header.component';
+import CheckoutPage from './component/pages/checkout/checkout.component';
 import SignInAndSignUpPage from './component/pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 import { setCurrentUser } from './redux/user/user.actions';
+import { selectCurrentUser } from './redux/user/user.selectors';
 
 import './App.css';
 
@@ -51,6 +55,7 @@ class App extends React.Component {
         {/* exact makes it so that the path in this case'/' has to match in order for the component to be rendered */}
         <Route exact path='/' component={HomePage} />
         <Route path='/shop' component={ShopPage} />
+        <Route exact path='/checkout' component={CheckoutPage} />
         <Route exact path='/signin' render={() => this.props.currentUser ? (<Redirect to='/'/>) : (<SignInAndSignUpPage/>) } />
       </Switch>
       
@@ -58,8 +63,8 @@ class App extends React.Component {
   );
   }
 }
-const mapStateToProps = ({user}) => ({
-  currentUser: user.currentUser
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser
 })
 const mapDispatchToProps = dispatch => ({
   setCurrentUser: user => dispatch(setCurrentUser(user)) //dispatch lets redux know that whatever ypu're passing me is an action object that needs to be passed to every reducer
